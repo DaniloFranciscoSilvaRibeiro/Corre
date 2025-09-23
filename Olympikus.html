@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>https:\\www.olympkikus.com.br</title>
+  <title>https://www.olympikus.com.br</title>
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
     }
     .cabecalho {
       background-color: rgb(55, 11, 248);
@@ -15,7 +16,6 @@
       display: flex;
       align-items: center;
       gap: 40px;
-      box-shadow: 0 2px 8px 12px (0,0,0,0);
     }
     .cabecalho h1 {
       margin: 0;
@@ -23,14 +23,34 @@
       font-weight: normal;
       font-style: italic;
       font-size: 30px;
-      padding: -20px;
     }
     .menu {
-      font-size: 10px;
+      font-size: 12px;
       display: flex;
       gap: 20px;
       font-family: Arial, sans-serif;
       font-weight: normal;
+    }
+    .linha-preta {
+      background-color: #000;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .linha-preta span {
+      flex: 1;
+      text-align: center;
+    }
+    .seta {
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0 10px;
     }
   </style>
 </head>
@@ -45,8 +65,13 @@
       <h2>INFANTIL</h2>
       <h2>OFERTAS</h2>
       <h2>EXPLORE OLYMPIKUS</h2>
-
     </div>
+  </div>
+
+  <div class="linha-preta">
+    <div class="seta">&#10094;</div>
+    <span>Frete grátis para todo o Brasil acima de R$ 199,99</span>
+    <div class="seta">&#10095;</div>
   </div>
 </body>
 </html>
