@@ -15,6 +15,7 @@
       padding: 12px 20px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 40px;
     }
     .cabecalho h1 {
@@ -30,19 +31,21 @@
       gap: 20px;
       font-family: Arial, sans-serif;
       font-weight: normal;
+      flex: 1;
+      justify-content: center;
     }
     .linha-preta {
-      background-color: #000;
-      color: #fff;
-      font-size: 12px;
+      background-color: black;
+      color: white;
+      font-size: 10px;
       text-align: center;
-      padding: 6px 0;
+      padding: 4px 0;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
     }
-    .linha-preta span {
+    .linha-preta h2 {
       flex: 1;
       text-align: center;
     }
@@ -51,6 +54,74 @@
       font-size: 14px;
       cursor: pointer;
       padding: 0 10px;
+    }
+    .cabbarra {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .barra {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 25px;
+      border-radius: 20px;
+    }
+    .barra input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-size: 12px;
+      width: 120px;
+    }
+    .barra button {
+      border: none;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+    .icons {
+      display: flex;
+      gap: 8px;
+    }
+    .icon-btn {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .familia-corre {
+      width: 100%;
+      display: block;
+    }
+    .colecao-titulo {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      letter-spacing: 3px;
+    }
+    .colecao-galeria {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .colecao-galeria img {
+      width: 300px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .colecao-galeria img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -66,12 +137,34 @@
       <h2>OFERTAS</h2>
       <h2>EXPLORE OLYMPIKUS</h2>
     </div>
+    <div class="cabbarra">
+      <div class="barra">
+        <input type="text" placeholder="Buscar">
+        <button>🔍</button>
+      </div>
+      <div class="icons">
+        <div class="icon-btn" title="Perfil">👤</div>
+        <div class="icon-btn" title="Favoritos">❤</div>
+        <div class="icon-btn" title="Carrinho">🛒</div>
+      </div>
+    </div>
   </div>
 
   <div class="linha-preta">
     <div class="seta">&#10094;</div>
-    <span>Frete grátis para todo o Brasil acima de R$ 199,99</span>
+    <h2>Frete grátis para todo o Brasil acima de R$ 199,99</h2>
     <div class="seta">&#10095;</div>
   </div>
+
+  <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/3330ea70-584c-493e-b7f5-d234cbcad967___d2513b5f2b4eb364784667108b03d235.jpg" alt="Família Corre" class="familia-corre">
+
+  <div class="colecao-titulo">COLEÇÃO</div>
+
+  <div class="colecao-galeria">
+    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/43374ec4-2840-4bcf-a323-d1db5525ebf4___2fb4dae0d258dc1d9c98155e972a9098.jpg" alt="Tênis 1">
+    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/95357968-5c47-4e73-8afd-a55f58b27366___e351f8af4c330cf54848f4f6ea548ee6.jpg" alt="Tênis 2">
+    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/28ef65a8-c455-4773-8434-ad10b69db9f5___061b91a12de16587cfdbafecf08d86e7.jpg" alt="Tênis 3">
+  </div>
+
 </body>
 </html>
