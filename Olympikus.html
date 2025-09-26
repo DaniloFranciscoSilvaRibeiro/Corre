@@ -123,48 +123,79 @@
     .colecao-galeria img:hover {
       transform: scale(1.05);
     }
+    .esconder {
+      display: none;
+    }
+    .btn {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 18px;
+      background: rgb(55,11,248);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <div class="cabecalho">
-    <h1>olympikus</h1>
-    <div class="menu">
-      <h2>FAMÍLIA CORRE</h2>
-      <h2>LANÇAMENTOS</h2>
-      <h2>MASCULINO</h2>
-      <h2>FEMININO</h2>
-      <h2>INFANTIL</h2>
-      <h2>OFERTAS</h2>
-      <h2>EXPLORE OLYMPIKUS</h2>
-    </div>
-    <div class="cabbarra">
-      <div class="barra">
-        <input type="text" placeholder="Buscar">
-        <button>🔍</button>
+  <div id="principal">
+    <div class="cabecalho">
+      <h1>olympikus</h1>
+      <div class="menu">
+        <h2>FAMÍLIA CORRE</h2>
+        <h2>LANÇAMENTOS</h2>
+        <h2>MASCULINO</h2>
+        <h2>FEMININO</h2>
+        <h2>INFANTIL</h2>
+        <h2>OFERTAS</h2>
+        <h2>EXPLORE OLYMPIKUS</h2>
       </div>
-      <div class="icons">
-        <div class="icon-btn" title="Perfil">👤</div>
-        <div class="icon-btn" title="Favoritos">❤</div>
-        <div class="icon-btn" title="Carrinho">🛒</div>
+      <div class="cabbarra">
+        <div class="barra">
+          <input type="text" placeholder="Buscar">
+          <button>🔍</button>
+        </div>
+        <div class="icons">
+          <div class="icon-btn" title="Perfil">👤</div>
+          <div class="icon-btn" title="Favoritos">❤</div>
+          <div class="icon-btn" title="Carrinho">🛒</div>
+        </div>
       </div>
     </div>
+    <div class="linha-preta">
+      <h2>Frete grátis para todo o Brasil acima de R$ 199,99</h2>
+    </div>
+    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/3330ea70-584c-493e-b7f5-d234cbcad967___d2513b5f2b4eb364784667108b03d235.jpg" alt="Família Corre" class="familia-corre">
+    <div class="colecao-titulo">COLEÇÃO</div>
+    <div class="colecao-galeria">
+      <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/43374ec4-2840-4bcf-a323-d1db5525ebf4___2fb4dae0d258dc1d9c98155e972a9098.jpg" alt="Tênis 1">
+      <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/95357968-5c47-4e73-8afd-a55f58b27366___e351f8af4c330cf54848f4f6ea548ee6.jpg" alt="Tênis 2">
+      <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/28ef65a8-c455-4773-8434-ad10b69db9f5___061b91a12de16587cfdbafecf08d86e7.jpg" alt="Tênis 3">
+    </div>
+    <button class="btn" onclick="mostrarTabela()">Preços</button>
   </div>
-
-  <div class="linha-preta">
-    <div class="seta">&#10094;</div>
-    <h2>Frete grátis para todo o Brasil acima de R$ 199,99</h2>
-    <div class="seta">&#10095;</div>
+  <div id="tabela" class="esconder">
+    <h1>Tabela de Preços - Família Corre</h1>
+    <table border="1" width="100%">
+      <tr><th>Tênis</th><th>Preço</th></tr>
+      <tr><td>Olympikus Corre 4</td><td>R$ 599,99</td></tr>
+      <tr><td>Olympikus Corre 3</td><td>R$ 799,99</td></tr>
+      <tr><td>Olympikus Corre max</td><td>R$ 499,99</td></tr>
+      <tr><td>Olympikus Corre turbo</td><td>R$ 699,99</td></tr>
+    </table>
+    <button class="btn" onclick="voltar()">Voltar</button>
   </div>
-
-  <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/3330ea70-584c-493e-b7f5-d234cbcad967___d2513b5f2b4eb364784667108b03d235.jpg" alt="Família Corre" class="familia-corre">
-
-  <div class="colecao-titulo">COLEÇÃO</div>
-
-  <div class="colecao-galeria">
-    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/43374ec4-2840-4bcf-a323-d1db5525ebf4___2fb4dae0d258dc1d9c98155e972a9098.jpg" alt="Tênis 1">
-    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/95357968-5c47-4e73-8afd-a55f58b27366___e351f8af4c330cf54848f4f6ea548ee6.jpg" alt="Tênis 2">
-    <img src="https://olympikus.vtexassets.com/assets/vtex.file-manager-graphql/images/28ef65a8-c455-4773-8434-ad10b69db9f5___061b91a12de16587cfdbafecf08d86e7.jpg" alt="Tênis 3">
-  </div>
-
+  <script>
+    function mostrarTabela() {
+      document.getElementById("principal").classList.add("esconder");
+      document.getElementById("tabela").classList.remove("esconder");
+    }
+    function voltar() {
+      document.getElementById("tabela").classList.add("esconder");
+      document.getElementById("principal").classList.remove("esconder");
+    }
+  </script>
 </body>
 </html>
